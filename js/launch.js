@@ -1,0 +1,1 @@
+yabaGameProto0.init();
