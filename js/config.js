@@ -16,7 +16,7 @@ yabaGameProto0.config = ( function() {
           NUMBER_OF_TERMS = util.calcNumberOfTermsTo(NUMBER_OF_SPACE_LEVEL, QUAD),
           NUMBER_OF_CELLS = Math.pow(QUAD, NUMBER_OF_CLEAVAGE),	// 最下位空間のセルの総数
           NUMBER_OF_ROWS_COLS = Math.sqrt(NUMBER_OF_CELLS),	// 最下位空間の1辺に並ぶセルの数
-          UNIT_LENGTH = Math.floor(STANDARD_LENGTH / NUMBER_OF_ROWS_COLS);	// 最下位空間のセルの1辺のピクセル数
+          UNIT_LENGTH = STANDARD_LENGTH / NUMBER_OF_ROWS_COLS;	// 最下位空間のセルの1辺のピクセル数
           
     return {
         getConfig: () => {
