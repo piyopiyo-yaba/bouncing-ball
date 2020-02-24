@@ -20,7 +20,7 @@ const yabaGameProto0 = (function () {
 
         let balls = [];
 
-        while (balls.length < 10000) {
+        while (balls.length < 1000) {
             const r = util.random(5, 10);
             let ball = new Ball(
                 // ball position always drawn at least one ball width
