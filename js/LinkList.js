@@ -5,17 +5,17 @@
 
 // --------------------------------[LinkList]-----コンストラクタメソッド-----------------------------------
 
-yabaGameProto0.LinkList = function() {
+yabaGameProto0.LinkList = function () {
 	this.head = null;
 	this.tail = null;
 };
 
 // --------------------------------[LinkList]-----プロトタイプメソッド-----------------------------------
 
-yabaGameProto0.LinkList.prototype.enque = function(node) {
+yabaGameProto0.LinkList.prototype.enque = function (node) {
 	if (this.head !== null && this.tail !== null) {
 		this.tail.nextNode = node;
-		node.preNode = this.tail;	
+		node.preNode = this.tail;
 		this.tail = node;
 
 		return;
@@ -24,12 +24,12 @@ yabaGameProto0.LinkList.prototype.enque = function(node) {
 	this.tail = node;
 };
 
-yabaGameProto0.LinkList.prototype.remove = function(node) {
+yabaGameProto0.LinkList.prototype.remove = function (node) {
 	if (node.preNode === null) this.head = node.nextNode;
 	else node.preNode.nextNode = node.nextNode;
 
 	if (node.nextNode === null) this.tail = node.preNode;
 	else node.nextNode.preNode = node.preNode;
-		
+
 	node.preNode = node.nextNode = null;
 };
