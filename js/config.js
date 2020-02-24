@@ -11,7 +11,7 @@ yabaGameProto0.config = (function () {
 
     let STANDARD_LENGTH = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight;
     const QUAD = 4; // 四分割
-    const NUMBER_OF_CLEAVAGE = 5;					// 分割回数
+    const NUMBER_OF_CLEAVAGE = 3;					// 分割回数
     const NUMBER_OF_SPACE_LEVEL = NUMBER_OF_CLEAVAGE + 1;
     const NUMBER_OF_TERMS = util.calcNumberOfTermsTo(NUMBER_OF_SPACE_LEVEL, QUAD);
     const NUMBER_OF_CELLS = Math.pow(QUAD, NUMBER_OF_CLEAVAGE);	// 最下位空間のセルの総数
