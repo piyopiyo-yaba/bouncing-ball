@@ -3,7 +3,7 @@
 */
 // --------------------------------[artist]-----オブジェクトー-----------------------------------
 
-yabaGameProto0.artist = ( function() {
+yabaGameProto0.artist = (function () {
 	const drawMode = {
 
 		ball: (ball, ctx) => {
@@ -12,15 +12,15 @@ yabaGameProto0.artist = ( function() {
 			ctx.beginPath();
 			ctx.fillStyle = ball.color;
 			ctx.arc(o.x, o.y, ball.r, 0, 2 * Math.PI);
-			ctx.fill();		
+			ctx.fill();
 		},
-	},
+	};
 
-	drawSprite = (sprite, ctx) => { drawMode[sprite.getType()](sprite, ctx) },
+	const drawSprite = (sprite, ctx) => { drawMode[sprite.getType()](sprite, ctx) };
 
-	drawSpriteCollisionPoints = (sprite, ctx) => {
+	const drawSpriteCollisionPoints = (sprite, ctx) => {
 		const SpriteCollisionPoints = sprite.getCollisionPoints();
-		
+
 		for (let i = 0; i < SpriteCollisionPoints.length; i += 1) {
 			ctx.beginPath();
 			ctx.fillStyle = "red";
@@ -31,11 +31,11 @@ yabaGameProto0.artist = ( function() {
 				0,
 				2 * Math.PI
 			);
-			ctx.fill();			
+			ctx.fill();
 		}
-	}; 
+	};
 
-	return	{
+	return {
 		drawSprite: drawSprite,
 		drawSpriteCollisionPoints: drawSpriteCollisionPoints,
 	};
